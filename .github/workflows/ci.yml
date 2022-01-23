@@ -8,7 +8,7 @@ on:
   pull_request:
     branches: [master]
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     strategy:
@@ -31,10 +31,3 @@ jobs:
 
       - name: Test 🧪
         run: npm run test
-
-      - name: Deploy 🚀
-        if: matrix.node-version == '16.x'
-        uses: JamesIves/github-pages-deploy-action@v4.2.2
-        with:
-          branch: gh-pages
-          folder: dist

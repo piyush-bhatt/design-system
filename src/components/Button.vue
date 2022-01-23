@@ -18,14 +18,15 @@ defineEmits<{ (e: 'clicked'): void }>()
   <button
     type="button"
     :disabled="disabled"
+    className="root"
     @click="!disabled && $emit('clicked')"
   >
     {{ label }}
   </button>
 </template>
 
-<style scoped lang="scss">
-button {
+<style scoped>
+.root {
   padding: 12px 24px;
   border: none;
   border-radius: 8px;
@@ -40,13 +41,13 @@ button {
   background-color: v-bind(color);
   outline: none;
   cursor: pointer;
+}
 
-  &:disabled {
-    background-color: #eae9e3;
-    color: #aaa8a1;
-    cursor: not-allowed;
+.root:disabled {
+  background-color: #eae9e3;
+  color: #aaa8a1;
+  cursor: not-allowed;
 
-    pointer-events: none;
-  }
+  pointer-events: none;
 }
 </style>

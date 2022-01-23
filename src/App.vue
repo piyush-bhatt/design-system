@@ -9,13 +9,13 @@ const onClick = () => {
 </script>
 
 <template>
-  <div class="wrapper">
+  <div className="wrapper">
     <img alt="Vue logo" src="@/assets/logo.png" />
     <Button label="Click me!" @clicked="onClick" />
   </div>
 </template>
 
-<style>
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
