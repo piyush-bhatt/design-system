@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "declaration": true,
     "target": "esnext",
     "useDefineForClassFields": true,
     "module": "esnext",
@@ -9,6 +10,7 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
+    "declarationDir": "dist",
     "lib": ["esnext", "dom"],
     "baseUrl": ".",
     "paths": {
@@ -17,5 +19,6 @@
     // https://github.com/johnsoncodehk/volar/issues/552#issuecomment-934166166
     "types": ["vite/client", "jest", "node"]
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "exclude": ["node_modules/**/*"]
 }

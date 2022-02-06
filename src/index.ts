@@ -1,2 +1,4 @@
-export { default as Button } from './components/Button.vue'
-export { default as Label } from './components/Label.vue'
+import Button from './components/Button.vue'
+import Label from './components/Label.vue'
+
+export { Button, Label }

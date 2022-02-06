@@ -6,6 +6,7 @@ import { resolve } from 'path'
 export default defineConfig({
   plugins: [vue()],
   build: {
+    emptyOutDir: false, // keep tsc generated .d.ts
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'design-system',
@@ -14,6 +15,7 @@ export default defineConfig({
     rollupOptions: {
       external: ['vue'],
       output: {
+        // sourcemap: true,
         globals: {
           vue: 'Vue',
         },
