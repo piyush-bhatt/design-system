@@ -6,7 +6,7 @@ interface Props {
 }
 
 withDefaults(defineProps<Props>(), {
-  label: '',
+  label: 'Default button label',
   color: '#3EB489',
   disabled: false,
 })

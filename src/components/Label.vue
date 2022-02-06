@@ -4,7 +4,7 @@ interface Props {
 }
 
 withDefaults(defineProps<Props>(), {
-  text: '',
+  text: 'This is the default label text',
 })
 </script>
 
